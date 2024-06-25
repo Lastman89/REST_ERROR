@@ -15,11 +15,11 @@ public class AuthorizationService {
 
     public List<Authorities> getAuthorities(String user, String password) {
         if (isEmpty(user) || isEmpty(password)) {
-            throw new InvalidCredentials();
+            throw new InvalidCredentials("Unknown user or password");
         }
         List<Authorities> userAuthorities = userRepository.getUserAuthorities(user, password);
         if (isEmpty(userAuthorities)) {
-            throw new UnauthorizedUser();
+            throw new UnauthorizedUser("Unknown user");
         }
         return userAuthorities;
     }
