@@ -1,4 +1,4 @@
-package ru.netology.rest_final;
+package ru.netology.rest_final.repository;
 
 public enum Authorities {
     READ, WRITE, DELETE

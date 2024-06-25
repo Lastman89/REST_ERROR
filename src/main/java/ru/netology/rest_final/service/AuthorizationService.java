@@ -1,17 +1,22 @@
-package ru.netology.rest_final;
+package ru.netology.rest_final.service;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.netology.rest_final.repository.Authorities;
 import ru.netology.rest_final.exception.InvalidCredentials;
 import ru.netology.rest_final.exception.UnauthorizedUser;
+import ru.netology.rest_final.repository.UserRepository;
 
 import java.util.List;
 
 @Service
 public class AuthorizationService {
-    @Autowired
-    UserRepository userRepository;
+
+    private final UserRepository userRepository;
+
+    public AuthorizationService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public List<Authorities> getAuthorities(String user, String password) {
         if (isEmpty(user) || isEmpty(password)) {

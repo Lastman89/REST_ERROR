@@ -1,10 +1,9 @@
-package ru.netology.rest_final;
+package ru.netology.rest_final.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.client.HttpStatusCodeException;
 import ru.netology.rest_final.exception.InvalidCredentials;
 import ru.netology.rest_final.exception.UnauthorizedUser;
 

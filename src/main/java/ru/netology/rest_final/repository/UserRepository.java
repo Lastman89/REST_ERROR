@@ -1,4 +1,4 @@
-package ru.netology.rest_final;
+package ru.netology.rest_final.repository;
 
 
 import org.springframework.stereotype.Repository;
@@ -9,8 +9,8 @@ import java.util.List;
 @Repository
 public class UserRepository {
 
-    private String user = "Alex";
-    private String password = "1234";
+    private final String user = "Alex";
+    private final String password = "1234";
 
     public List<Authorities> getUserAuthorities(String user, String password) {
 
