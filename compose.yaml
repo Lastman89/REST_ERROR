@@ -7,7 +7,5 @@ services:
       context: ./
       # Имя Docker-файла из которого будет собран образ
       dockerfile: Dockerfile
-      # Команда, которая будет выполнена после старта сервиса
-    command: make start
     ports: # Проброс портов
       - "8080:8080"
